@@ -66,6 +66,10 @@
   margin-bottom: 5px;
 }
 
+.filters .amenities .popover li input {
+  margin-right: 10px;
+}
+
 .filters .locations ul.popover h2 {
   font-size: 16px;
   margin: 0;
