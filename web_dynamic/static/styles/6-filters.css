@@ -34,6 +34,9 @@
   height: 50%;
   padding: 4.5px 0 12px 30px;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .filters .locations ul.popover,
