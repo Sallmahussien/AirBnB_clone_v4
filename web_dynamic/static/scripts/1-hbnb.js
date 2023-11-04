@@ -1,14 +1,8 @@
 $(document).ready(() => {
-  updateAmenityText();
-
-  $('.filters .amenities .popover li input').on('change', function() {
-    updateAmenityText();
-  });
-
-  function updateAmenityText() {
+  $('.filters .amenities .popover li input').change(() => {
     const amenityNames = [];
 
-    $('.filters .amenities .popover li input').each(function() {
+    $('.filters .amenities .popover li input').each(function () {
       const amenityName = $(this).attr('data-name');
       if ($(this).is(':checked')) {
         amenityNames.push(amenityName);
@@ -22,5 +16,5 @@ $(document).ready(() => {
     } else {
       h4Element.html('&nbsp;');
     }
-  }
+  });
 });
