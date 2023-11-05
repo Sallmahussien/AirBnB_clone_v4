@@ -18,9 +18,11 @@ $(document).ready(() => {
     }
   });
 
-  $.get("http://0.0.0.0:5001/api/v1/status/", () => {
-    $('header#api_status').addClass('available');
-  }).fail(() => {
-    $('header#api_status').removeClass('available');
+  $.get("http://localhost:5001/api/v1/status/", (data) => {
+    if (data.status === 'OK') {
+      $('header #api_status').addClass('available');
+    } else {
+      $('header #api_status').removeClass('available');
+    }
   });
 });
